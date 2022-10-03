@@ -1,7 +1,15 @@
 import { NestFactory } from "@nestjs/core";
+import { existsSync, readFileSync } from "fs";
+import { argv } from "process";
 import { AppModule } from "./app.module";
-import config from "./config.json";
 import { bot } from "./bot";
+let config = { qq: 0, password: "" };
+if (existsSync("./config.json")) {
+  config = JSON.parse(readFileSync("./config.json").toString());
+} else if (argv.length > 2) {
+  config = { qq: Number.parseInt(argv[2]), password: argv[3] };
+}
+
 async function init() {
   await bot
     .on("system.login.slider", function (e) {

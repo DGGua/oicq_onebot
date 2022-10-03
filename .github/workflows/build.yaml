@@ -10,8 +10,6 @@ jobs: # 各个作业
       - uses: actions/checkout@v2 # git pull
       - name: Login Docker
         run: docker login -u ${{ secrets.REGISTRY_USERNAME }} -p ${{ secrets.REGISTRY_PASSWORD }}
-      - name: Add Config
-        run: echo '${{ secrets.CONFIG_JSON }}' >> ./src/config.json
       - name: Build Docker
         run: |
           docker build --platform linux/amd64 -t dglog-backend:latest  .
