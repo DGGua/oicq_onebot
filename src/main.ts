@@ -12,6 +12,6 @@ async function init() {
     })
     .login(config.password);
   const app = await NestFactory.create(AppModule);
-  await app.listen(8080, "localhost");
+  await app.listen(8080);
 }
 init();

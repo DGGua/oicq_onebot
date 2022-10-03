@@ -1,0 +1,11 @@
+version: "3"
+services:
+  bot:
+    image: "dggua/oicq_bot"
+    ports:
+      - "7007:8080"
+
+    volumes:
+      - /home/ubuntu/.oicq:/app/data
+    restart: always
+    command: {qqnumber} {passowrd}
