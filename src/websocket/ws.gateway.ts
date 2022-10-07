@@ -1,6 +1,4 @@
-import { Catch } from "@nestjs/common";
 import {
-  ConnectedSocket,
   MessageBody,
   OnGatewayConnection,
   OnGatewayDisconnect,
