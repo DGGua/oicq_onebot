@@ -5,5 +5,5 @@ build/
 tmp/
 temp/
 database.sqlite
-src/config.json
+config.json
 yarn-error.log

@@ -10,4 +10,5 @@ WORKDIR /app
 RUN yarn install --production
 
 EXPOSE 8080
+EXPOSE 8081
 ENTRYPOINT [ "node", "/app/main.js" ]
