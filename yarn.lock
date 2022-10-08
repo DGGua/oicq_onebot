@@ -723,6 +723,14 @@
     multer "1.4.4-lts.1"
     tslib "2.4.0"
 
+"@nestjs/platform-ws@^9.1.4":
+  version "9.1.4"
+  resolved "https://registry.yarnpkg.com/@nestjs/platform-ws/-/platform-ws-9.1.4.tgz#60b2d4992249dd45c8f3748d5796dde8c06175c7"
+  integrity sha512-yHLloYioPdcx2RISM9w7AiHTLa7FwvecaT76QzaGraCtmE0r/ldDQAa5JNQ+620JZpCCGoq307pVQHNRYyJtJQ==
+  dependencies:
+    tslib "2.4.0"
+    ws "8.9.0"
+
 "@nestjs/schematics@^9.0.0":
   version "9.0.3"
   resolved "https://registry.yarnpkg.com/@nestjs/schematics/-/schematics-9.0.3.tgz#175218350fb3829c9a903e980046a11950310e24"
@@ -739,6 +747,15 @@
   resolved "https://registry.yarnpkg.com/@nestjs/testing/-/testing-9.1.2.tgz#98925cafab0cc92e0492d37ec17a6a7739b46a21"
   integrity sha512-BfwERdTppE4oz6qxCNJVo0kaRH2FO7mipooedT2nDtYW3krGZ8978odmGdpVgNz1xwqKDH3Y/68frs5oW2CTZw==
   dependencies:
+    tslib "2.4.0"
+
+"@nestjs/websockets@^9.1.4":
+  version "9.1.4"
+  resolved "https://registry.yarnpkg.com/@nestjs/websockets/-/websockets-9.1.4.tgz#9b612626433bdffa6ce232e641c74667afb0b3f7"
+  integrity sha512-tRiBVhBo41jsLsrQ1WMhO1EvDUSO2ydmCdB1x8pMC69bSCvEVj6VvL1/OJ2lP4j65g/4rFMtp5qBSlwPUuHqkw==
+  dependencies:
+    iterare "1.2.1"
+    object-hash "3.0.0"
     tslib "2.4.0"
 
 "@nodelib/fs.scandir@2.1.5":
@@ -1004,6 +1021,13 @@
   integrity sha512-X3HPWTwXRerBZS7Mo1k6vMVR1Z6zmJcDVn5O/31whe0tnjE4te6ZJSJGq1RiqHPjzPdMTfjCFogDJmwng9xHaQ==
   dependencies:
     "@types/superagent" "*"
+
+"@types/ws@^8.5.3":
+  version "8.5.3"
+  resolved "https://registry.yarnpkg.com/@types/ws/-/ws-8.5.3.tgz#7d25a1ffbecd3c4f2d35068d0b283c037003274d"
+  integrity sha512-6YOoWjruKj1uLf3INHH7D3qTXwFfEsg1kf3c0uDdSBJwfa/llkwIjrAGV7j7mVgGNbzTQ3HiHKKDXl6bJPD97w==
+  dependencies:
+    "@types/node" "*"
 
 "@types/yargs-parser@*":
   version "21.0.0"
@@ -4747,6 +4771,11 @@ write-file-atomic@^4.0.1:
   dependencies:
     imurmurhash "^0.1.4"
     signal-exit "^3.0.7"
+
+ws@8.9.0:
+  version "8.9.0"
+  resolved "https://registry.yarnpkg.com/ws/-/ws-8.9.0.tgz#2a994bb67144be1b53fe2d23c53c028adeb7f45e"
+  integrity sha512-Ja7nszREasGaYUYCI2k4lCKIRTt+y7XuqVoHR44YpI49TtryyqbqvDMn5eqfW7e6HzTukDRIsXqzVHScqRcafg==
 
 xtend@^4.0.0:
   version "4.0.2"

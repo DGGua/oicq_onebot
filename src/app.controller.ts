@@ -1,5 +1,4 @@
 import { Body, Controller, Get, HttpCode, Post } from "@nestjs/common";
-import { group } from "console";
 import { Quotable, Sendable } from "oicq";
 import { AppService } from "./app.service";
 import { bot } from "./bot";
