@@ -25,6 +25,9 @@ export class WsGateway
     bot.on("message.private", (event) =>
       this.broadcast({ event: "message.private", data: event })
     );
+    bot.on("message.group", (event) =>
+      this.broadcast({ event: "message.group", data: event })
+    );
   }
 
   handleConnection(client: WebSocket) {
@@ -47,6 +50,29 @@ export class WsGateway
     try {
       const { userId, message, source } = data;
       const ret = await bot.sendPrivateMsg(userId, message, source);
+      return {
+        event: "ok",
+        data: ret,
+      };
+    } catch (e) {
+      return {
+        event: "error",
+        data: e,
+      };
+    }
+  }
+  @SubscribeMessage("sendGroupMsg")
+  async groupMsg(
+    @MessageBody()
+    data: {
+      groupId: number;
+      message: Sendable;
+      source?: Quotable;
+    }
+  ): Promise<any> {
+    try {
+      const { groupId, message, source } = data;
+      const ret = await bot.sendGroupMsg(groupId, message, source);
       return {
         event: "ok",
         data: ret,
