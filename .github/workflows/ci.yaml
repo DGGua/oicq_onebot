@@ -22,14 +22,21 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
 
+    # This workflow uses actions that are not certified by GitHub.
+    # They are provided by a third-party and are governed by
+    # separate terms of service, privacy policy, and support
+    # documentation.
+
+    # NOTE: pnpm caching support requires pnpm version >= 6.10.0
+
     steps:
-      - uses: actions/checkout@v2
-      - uses: borales/actions-yarn@v3.0.0
+      - uses: actions/checkout@v3
+      - uses: pnpm/action-setup@646cdf48217256a3d0b80361c5a50727664284f2
         with:
-          cmd: install # will run `yarn install` command
-      - uses: borales/actions-yarn@v3.0.0
+          version: 7.13.3
+      - uses: actions/setup-node@v3
         with:
-          cmd: build # will run `yarn build` command
-#       - uses: borales/actions-yarn@v3.0.0
-#         with:
-#           cmd: test # will run `yarn test` command
+          node-version: "16"
+          cache: "pnpm"
+      - run: pnpm install
+      - run: pnpm build
