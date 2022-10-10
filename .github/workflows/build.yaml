@@ -7,7 +7,7 @@ jobs: # 各个作业
   Dockerize:
     runs-on: ubuntu-latest # 运行环境
     steps: # 作业的各个步骤
-      - uses: actions/checkout@v2 # git pull
+      - uses: actions/checkout@v3 # git pull
       - name: Login Docker
         run: docker login -u ${{ secrets.REGISTRY_USERNAME }} -p ${{ secrets.REGISTRY_PASSWORD }}
       - name: Build Docker
